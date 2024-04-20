@@ -16,7 +16,11 @@ app.use(cors());
 // Configure env
 dotenv.config()
 
-
+app.get("/",(req,res)=>{
+   res.send({
+    message:"Reflectify"
+   })
+})
 app.use('/posts', postRoutes);
 app.use("/user", userRouter);
 
